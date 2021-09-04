@@ -1,0 +1,30 @@
+    
+<div *ngIf="hangars">
+   
+    <button type="button" (click)='toggleManager()'><b>Id:</b> {{ hangars.id }}</button>
+    <div>
+        <label><b>Name:</b> </label> {{hangars.hangarname}}
+    </div>
+    <div [hidden]="togglemanager">
+    
+    <div>
+        <label><b>Model:</b> </label> {{hangars.model}}
+    </div>
+
+    <div *ngIf="!hangars.planeallocated">
+        <label><b>Allocated Status:</b> </label> Not Allocated
+    </div>
+
+    <div *ngIf="hangars.planeallocated">
+        <label><b>Allocated Status:</b> </label> Allocated
+    </div>
+
+    <button *ngIf="currentUser.roles=='ROLE_ADMIN'" type="button" style="margin-right: 20px;"  (click)='editHangars(hangars)'>Edit</button>
+    <button *ngIf="currentUser.roles=='ROLE_ADMIN'" class="button btn-danger" (click)='deleteHangars()'>Delete</button>
+
+    <button *ngIf="currentUser.roles!='ROLE_ADMIN'" class="button btn-success" (click)='allocatePLane(hangars)'>Allocate</button>
+</div>
+
+
+    <hr>
+</div>

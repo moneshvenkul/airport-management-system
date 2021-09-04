@@ -1,0 +1,35 @@
+<div class="jumbotron">
+<form (ngSubmit)="onUpdate()">
+ 
+    <div class="form-group">
+        <label for="name">Id</label>
+        <input type="text" class="form-control" id="id"  [(ngModel)]="manager.id" name="id" readonly>
+      </div>
+   
+ 
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name"  [(ngModel)]="manager.firstname" name="name">
+    </div>
+ 
+   
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="text" class="form-control" id="age"  [(ngModel)]="manager.age" name="age">
+    </div>
+ 
+    <div class="form-group">
+        <label>Active</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" value="MALE" [(ngModel)]="manager.gender">
+          <label class="form-check-label">Male</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" value="FEMALE" [(ngModel)]="manager.gender">
+          <label class="form-check-label">Female</label>
+        </div>
+      </div>
+ 
+    <button type="submit" class="btn btn-success">Update</button>
+  </form>
+</div>

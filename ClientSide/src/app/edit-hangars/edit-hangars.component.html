@@ -1,0 +1,24 @@
+<div class="jumbotron">
+<form (ngSubmit)="onUpdate()">
+ 
+    <div class="form-group">
+        <label for="name">Id</label>
+        <input type="text" class="form-control" id="id"  [(ngModel)]="hangars.id" name="id" readonly>
+      </div>
+   
+ 
+    <div class="form-group">
+      <label for="name">Hangar Name</label>
+      <input type="text" class="form-control" id="name"  [(ngModel)]="hangars.hangarname" name="name">
+    </div>
+ 
+   
+    <div class="form-group">
+      <label for="model">Model</label>
+      <input type="text" class="form-control" id="model"  [(ngModel)]="hangars.model" name="model">
+    </div>
+ 
+ 
+    <button type="submit" class="btn btn-success">Update</button>
+  </form>
+</div>

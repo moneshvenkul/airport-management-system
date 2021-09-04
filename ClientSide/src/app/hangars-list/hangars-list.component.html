@@ -1,0 +1,15 @@
+<div class="jumbotron">
+<h3>Hangars</h3>
+<div *ngFor="let hangar of hangars  | async | paginate: { itemsPerPage: count, currentPage: p }" style="width: 300px;">
+<app-hangars-details [hangars] = 'hangar'></app-hangars-details>
+</div>
+
+<div class="text-right">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+
+<div *ngIf="currentUser.roles=='ROLE_ADMIN'">
+    <button type="button" class="button btn-danger" (click)='deleteHangars()'>Delete All</button>
+</div>
+
+</div>

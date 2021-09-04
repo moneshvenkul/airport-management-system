@@ -1,0 +1,62 @@
+<div class="container" *ngIf="currentUser; else loggedOut">
+  <header class="jumbotron">
+    <h3 style="text-align: center;">
+      <strong>{{ currentUser.username }}</strong> Profile
+    </h3>
+    <img
+      id="profile-img"
+      src="../../assets/images/Social_pic.png"
+      class="profile-img-card"
+    />
+  </header>
+  <div class="jumbotron">
+  <p>
+    <strong>Token:</strong>
+    {{ currentUser.accessToken.substring(0, 20) }} ...
+    {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
+  </p>
+  <p>
+    <strong>Id:</strong>
+    {{ manager.id }}
+  </p>
+  <p>
+    <strong>Email:</strong>
+    {{ currentUser.email }}
+  </p>
+  <p>
+    <strong>Username:</strong>
+    {{ currentUser.username}}
+  </p>
+  <p>
+    <strong>Firstname:</strong>
+    {{ manager.firstname}}
+  </p>
+  <p>
+    <strong>Lastname:</strong>
+    {{ manager.lastname}}
+  </p>
+  <p>
+    <strong>Age:</strong>
+    {{ manager.age}}
+  </p>
+  <p>
+    <strong>Gender:</strong>
+    {{ manager.gender}}
+  </p>
+  <p>
+    <strong>Phonenumber:</strong>
+    {{ manager.phonenumber}}
+  </p>
+  <strong>Roles:</strong>
+  <P *ngIf="currentUser.roles=='ROLE_ADMIN'">
+      ADMIN
+  </P>
+  <P *ngIf="currentUser.roles!='ROLE_ADMIN'">
+    MANAGER
+  </P>
+</div>
+</div>
+
+<ng-template #loggedOut>
+  Please login.
+</ng-template>

@@ -1,0 +1,46 @@
+<div style="padding: 20px;" class="jumbotron">
+    <h1 style="color: rgb(0, 0, 0)">Admin Board</h1>
+
+    <nav>
+        <a routerLink="addplanes" class="btn btn-danger active" role="button"
+        routerLinkActive="active">Add Planes</a>
+        <a routerLink="viewplanes" class="btn btn-info active" role="button"
+        routerLinkActive="active">View Planes</a>
+        <a routerLink="addpilots" class="btn btn-danger active" role="button"
+        routerLinkActive="active">Add Pilots</a>
+        <a routerLink="viewpilots" class="btn btn-info active" role="button"
+        routerLinkActive="active">View Pilots</a>
+        <a routerLink="addhangars" class="btn btn-danger active" role="button"
+        routerLinkActive="active">Add Hangars</a>
+        <a routerLink="viewhangars" class="btn btn-info active" role="button"
+        routerLinkActive="active">View Hangar</a>
+    </nav>
+
+    
+        
+        <div style="margin-top: 20px;">
+        <button type="button" style="margin-bottom: 20px;" (click)='toggleManager()'>Manager's List</button>
+        <div [hidden]="togglemanager">
+        <div *ngFor="let manager of managers | async | paginate: { itemsPerPage: count, currentPage: p }" style="width: 300px;">
+        <app-managers-list [manager] = 'manager' ></app-managers-list>
+    
+    
+        </div>
+        
+        
+        <div class="text-right">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+
+          <div>
+            <button type="button" class="button btn-danger" (click)='deleteUsers()'>Delete All</button>
+        </div>
+       </div>
+       </div>
+
+       
+
+</div>
+       
+
+

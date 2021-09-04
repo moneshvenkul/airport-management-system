@@ -1,0 +1,8 @@
+<div class="jumbotron">
+    <h3>Unallocated Planes</h3>
+    <div *ngFor="let unallocatedplane of unallocatedplanes | async | paginate: { itemsPerPage: count, currentPage: p }" style="width: 300px;">
+    <app-unallocated-planes-details [unallocatedplanes] = 'unallocatedplane'></app-unallocated-planes-details>
+    </div>
+    <div class="text-right">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>

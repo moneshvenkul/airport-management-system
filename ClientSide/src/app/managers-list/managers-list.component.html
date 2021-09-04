@@ -1,0 +1,19 @@
+<div *ngIf="manager">
+  <hr>
+  <button type="button" (click)='toggleManager()'><b>Id:</b> {{ manager.id }}</button>
+  <div><label><b>UserName:</b> </label> {{ manager.username }}</div>
+  <div [hidden]="togglemanager">
+  <div><label><b>FirstName:</b> </label> {{ manager.firstname }}</div>
+  <div><label><b>LastName:</b> </label> {{ manager.lastname }}</div>
+  <div><label><b>Email:</b> </label> {{ manager.email }}</div>
+  <div><label><b>Age:</b> </label> {{ manager.age }}</div>
+  <div><label><b>Gender:</b> </label> {{ manager.gender }}</div>
+  <div><label><b>Phone Number: </b></label> {{ manager.phonenumber }}</div>
+
+  
+
+  <button  type="button" style="margin-right: 20px;" (click)="editManagers(manager)">Edit Details</button>
+  <button  type="button btn-danger" class="button btn-danger" style="margin: 20px;" (click)="deleteManagers()">Decline</button>
+
+</div>
+</div>
