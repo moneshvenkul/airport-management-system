@@ -1,0 +1,19 @@
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-navbar {
+  background: linear-gradient(90deg, rgba(5, 20, 45, 0.98), rgba(10, 60, 120, 0.95));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+}
+
+.app-content {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}

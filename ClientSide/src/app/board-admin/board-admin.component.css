@@ -1,5 +1,43 @@
-.btn{
-    margin-left:10px;
-    min-width: 120px;
-    max-width: 120px;
+.admin-board {
+  background: rgba(17, 24, 39, 0.78);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  backdrop-filter: blur(3px);
+}
+
+.admin-header h1 {
+  margin-bottom: 0.25rem;
+}
+
+.admin-header p {
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.admin-actions .btn {
+  min-width: 132px;
+}
+
+.admin-managers {
+  margin-top: 1.25rem;
+}
+
+.admin-managers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
+.manager-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
 }

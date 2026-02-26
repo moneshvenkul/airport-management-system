@@ -4,6 +4,14 @@ import { Observable } from 'rxjs';
 
 const API_URL = 'http://localhost:8080/api/test/';
 
+export interface DashboardStats {
+  managers: number;
+  planes: number;
+  pilots: number;
+  hangars: number;
+  allocatedPlanes: number;
+  unallocatedPlanes: number;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +23,10 @@ export class UserService {
 
   getPublicContent(): Observable<any> {
     return this.http.get(API_URL + 'all', { responseType: 'text' });
+  }
+
+  getDashboardStats(): Observable<DashboardStats> {
+    return this.http.get<DashboardStats>(API_URL + 'dashboard');
   }
 
   getUserBoard(): Observable<any> {

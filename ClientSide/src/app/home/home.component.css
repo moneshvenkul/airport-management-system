@@ -1,0 +1,92 @@
+:host {
+  display: block;
+}
+
+.home-hero {
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(120deg, rgba(13, 110, 253, 0.9), rgba(102, 16, 242, 0.85));
+  color: #fff;
+  box-shadow: 0 14px 34px rgba(3, 12, 35, 0.35);
+}
+
+.home-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  opacity: 0.85;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.home-subtitle {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+.home-status {
+  margin: 0;
+  font-weight: 600;
+}
+
+.stats-panel {
+  background: rgba(17, 24, 39, 0.75);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  color: #f8fafc;
+  backdrop-filter: blur(4px);
+}
+
+.stats-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.stats-panel-header h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.85rem;
+}
+
+.stat-card {
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: rgba(31, 41, 55, 0.9);
+  border-left: 4px solid var(--accent);
+}
+
+.stat-label {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.stat-value {
+  margin: 0.35rem 0 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.stats-state {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.stats-error {
+  color: #fecaca;
+}

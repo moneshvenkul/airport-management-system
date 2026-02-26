@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { BoardAdminComponent } from '../board-admin/board-admin.component';
-import { Manager } from '../Manager';
+import { Manager } from '../manager';
 import { ManagersService } from '../_services/managers.service';
 import { UserService } from '../_services/user.service';
 
