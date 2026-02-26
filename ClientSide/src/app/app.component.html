@@ -1,6 +1,5 @@
-
-<div id="app">
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
+<div id="app" class="app-shell">
+  <nav class="navbar navbar-expand navbar-dark app-navbar">
     <a href="#" class="navbar-brand">Airport Management System</a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item">
@@ -32,9 +31,8 @@
       </li>
     </ul>
   </nav>
-  
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</div>
 
+  <main class="container app-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

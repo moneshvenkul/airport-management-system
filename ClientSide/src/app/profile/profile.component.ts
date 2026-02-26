@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Manager } from '../Manager';
+import { Manager } from '../manager';
 import { TokenStorageService } from '../_services/token-storage.service';
 import { UserService } from '../_services/user.service';
 

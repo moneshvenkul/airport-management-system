@@ -1,9 +1,25 @@
-<div class="container">
-  <header class="jumbotron">
-    <div style="text-align:center"><h1>Airport Management System</h1></div>
-    <div style="text-align:center"><h3>Project Demo</h3></div>
-    <div style="text-align:center"><h4>by</h4></div>
-    <div style="text-align:center"><h3> Monesh Venkul Vommi  </h3></div>
-    <div style="text-align:center"><h3> (51886600)  </h3></div>
-  </header>
-</div>
+<section class="home-hero">
+  <p class="home-eyebrow">Airport Management System</p>
+  <h1>Operations cockpit for your entire airport</h1>
+  <p class="home-subtitle">
+    Track crews, planes, and hangars in one place with a cleaner dashboard and streamlined actions.
+  </p>
+  <p class="home-status">{{ content }}</p>
+</section>
+
+<section class="stats-panel">
+  <div class="stats-panel-header">
+    <h2>Live Overview</h2>
+    <button class="btn btn-outline-light btn-sm" (click)="fetchDashboardStats()">Refresh</button>
+  </div>
+
+  <div *ngIf="loading" class="stats-state">Loading metrics...</div>
+  <div *ngIf="!loading && loadingError" class="stats-state stats-error">{{ loadingError }}</div>
+
+  <div *ngIf="!loading && stats" class="stats-grid">
+    <article class="stat-card" *ngFor="let card of statsCards" [style.--accent]="card.color">
+      <p class="stat-label">{{ card.label }}</p>
+      <p class="stat-value">{{ stats[card.key] }}</p>
+    </article>
+  </div>
+</section>
